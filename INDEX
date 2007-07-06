@@ -1,0 +1,17 @@
+AffysTissue		All Affymetrix' CDF probe set pairs with Q75 >= 55
+AffysTissueMC		All Affymetrix' CDF probe set pairs with Q75 >= 55, 
+			with their metacorrelation coefficients
+AffysTissue.noBl	Affymetrix' CDF probe set pairs with Q75 >= 55, 
+			pairs that align to each other with BLAST in at least 
+			one direction with an E-value smaller than 10^{-10} were omitted
+CustomsTissue		All custom-made's CDF probe set pairs with Q75 >= 55
+CustomsTissueMC		All custom-made's CDF probe set pairs with Q75 >= 55 
+			with their metacorrelation coefficients
+CustomsTissue.noBl	All custom-made's CDF probe set pairs with Q75 >= 55, 
+			pairs that align to each other with BLAST in at least 
+			one direction with an E-value smaller than 10^{-10} were omitted
+ex1			Cross-hybridisation example 1
+ex2			Cross-hybridisation example 2
+ex3			Cross-hybridisation example 3
+plotExample		S4 method to plot 'XhybExamples' class objects
+runSimulation		Function to run our simulation

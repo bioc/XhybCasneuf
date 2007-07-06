@@ -1,0 +1,126 @@
+#################
+##    DATA     ##  in data/ subdirectory
+#################
+
+1] 2 data.frames containing all probe set pairs with Q75 >= 55 for both the 
+    Affymetrix and the custom-made CDF.
+   Both contain a 'peCC' column which holds the pairs Pearson correlation 
+    coefficient calculated on the Tissue dataset (orig from AtgenExpress data).
+   The 'alSum' column contains the Q75 value of the alignment scores of X's 
+    reporters to the transcript of Y.
+   The 'meant2hit' column contains the gene locus the probe set was designed
+    to target according to Affymetrix (extracted from ATH1-121501_annot.csv).
+
+    AffysTissue.rda
+    ===============
+    data.frame with 42826 rows.
+    > colnames(AffysTissue)
+    [1] "pr"         "target"     "alSum"      "meant2hit"  "PSofTarget"
+    [6] "peCC"      
+    
+    
+    CustomsTissue.rda
+    =================
+    data.frame with 40094 rows.
+    > colnames(CustomsTissue)
+    [1] "pr"     "target" "alSum"  "peCC"  
+
+
+2] Same as above but gene pairs that align to each other with BLAST in at 
+    least one direction with an E-value smaller than 10^{-10} are omitted 
+
+    AffysTissue.noBl.rda
+    ====================
+    data.frame with 11361 rows.
+    
+    CustomsTissue.noBl.rda
+    ======================
+    data.frame with 10702 rows.
+    
+
+3] Same as 1] but a column containing the metacorrelation coefficients added.
+   Only those probe set pairs are included for which is this value =! NA (which
+    is the case when the alignment scores of X's reporters to Y's transcript are 
+    all identical -> no correlation coefficient can be calculated).
+       
+    AffysTissueMC.rda
+    =================
+    data.frame with 42815 rows.
+    > colnames(AffysTissueMC)
+    [1] "pr"         "target"     "alSum"      "meant2hit"  "PSofTarget"
+    [6] "peCC"       "Mcor"      
+
+    
+    CustomsTissueMC.rda
+    ===================
+    data.frame with 39424 rows.
+    > colnames(CustomsTissueMC)
+    [1] "pr"     "target" "alSum"  "peCC"   "Mcor"  
+
+
+4] Cross-hybridisation examples.   
+   All three are S4 objects. To look at the data, must set class first:
+
+   setClass("XhybExamples", representation(X = "character", Y = "character", 
+   IVX = "numeric", IVY = "numeric", IVXi = "matrix", ai = "numeric"))
+
+   The slots of these objects contain:
+    X    : the name of probe set X
+    Y    : the name of probe set Y    
+    IVX  : the expression intensities of X in the Tissue dataset  
+    IVY  : the expression intensities of Y in the Tissue dataset  
+    IVXi : the expression intensities of X's reporters in the Tissue dataset   
+    ai   : the alignment scores of X's reporters to Y's transcript sequence  
+
+    ex1.rda
+    =======
+    X: "245875_at"
+    Y: "AT3G28550"
+   
+    ex2.rda
+    =======
+    X: "250857_at"
+    Y: "AT1G75180"
+
+    ex3.rda
+    =======
+    X: "258508_at"
+    Y: "AT3G06650"
+
+
+
+####################
+##    SCRIPTS     ##    in R/ subdirectory
+####################
+
+1]  An S4 method to plot S4 objects of 'XhybExamples' objects.
+    This generates a window with 3 plots: 
+      - The left one plots the summarised expression patterns of X and Y.
+      - The middle plot shows the background corrected normalised intensity
+        values of X's reporters. The colours used correspond to the alignment
+        strength (ai) of the reporter to Y's transcript sequence.
+      - The plot on the right plots the Pearson correlation coefficient of the
+        reporters' expression patterns to Y's expression pattern in function
+        of their alignment score, ai.
+      
+
+    plotExample.R
+    =============
+    
+2] 'runSimulation' is a function that will run the simulation we ran for our study.
+   By modifying the parameters, users can play with it themselves.
+
+    runSimulation.R 
+    ===============
+
+
+
+
+
+
+
+
+
+
+
+
