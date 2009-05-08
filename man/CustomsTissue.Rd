@@ -24,14 +24,14 @@ with Q75 >= 55.
 \code{CustomsTissueMC} holds a subset of the pairs in \code{CustomsTissue}, namely those
 whose metacorrelation coefficient is not NA are included. 
 For \code{CustomsTissue.noBl}, the pairs of \code{CustomsTissue} that align to each 
-other with BLAST in at least one direction with an E-value smaller than 10\^{-10} 
-were omitted.
+other with BLAST in at least one direction with an E-value smaller than
+\eqn{10\^{-10}} were omitted.
 }
 
 
 \references{
-Casneuf, Van de Peer and Huber (Submitted) ; 
-AtgenExpress data used: Schmid, M., Davison, T. S., Henz, S. R., Pape, U. J., Demar, M., Vingron, M. Schoelkopf, B. Weigel, D., and Lohmann, J. (2005) A gene expression map of Arabidopsis development. Nature Genetics, 37, 501-506.
+Casneuf, Van de Peer and Huber,
+AtgenExpress data used: Schmid, M., Davison, T. S., Henz, S. R., Pape, U. J., Demar, M., Vingron, M. Schoelkopf, B. Weigel, D., and Lohmann, J. (2005) A gene expression map of Arabidopsis development. \emph{Nature Genetics}, 37, 501-506.
 }
 
 \seealso{\code{\link[Xhyb:AffysTissue]{AffysTissue}}}
