@@ -25,7 +25,7 @@ with Q75 >= 55.
 whose metacorrelation coefficient is not NA are included. 
 For \code{CustomsTissue.noBl}, the pairs of \code{CustomsTissue} that align to each 
 other with BLAST in at least one direction with an E-value smaller than
-\eqn{10\^{-10}} were omitted.
+\eqn{10^{-10}} were omitted.
 }
 
 
