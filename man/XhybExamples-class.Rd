@@ -1,6 +1,7 @@
 \name{XhybExamples-class}
 \docType{class}
 \alias{XhybExamples-class}
+\alias{plotExample}
 \alias{plotExample,XhybExamples-method}
 
 \title{Class "XhybExamples"}
