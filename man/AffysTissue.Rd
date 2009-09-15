@@ -37,7 +37,7 @@ Casneuf, Van de Peer and Huber,
 AtgenExpress data used: Schmid, M., Davison, T. S., Henz, S. R., Pape, U. J., Demar, M., Vingron, M. Schoelkopf, B. Weigel, D., and Lohmann, J. (2005) A gene expression map of Arabidopsis development. \emph{Nature Genetics}, 37, 501-506.
 }
 
-\seealso{\code{\link[Xhyb:CustomsTissue]{CustomsTissue}}}
+\seealso{\code{\link{CustomsTissue}}}
 \examples{
 data(AffysTissue)
 data(AffysTissueMC)
