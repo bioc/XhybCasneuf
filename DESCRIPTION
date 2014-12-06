@@ -1,5 +1,5 @@
 Package: XhybCasneuf
-Version: 1.5.0
+Version: 1.5.1
 Date: 2007-06-21
 Title: EBI/PSB cross-hybridisation study package
 Author: Tineke Casneuf <tine@ebi.ac.uk>
@@ -7,4 +7,4 @@ Maintainer: Tineke Casneuf <tine@ebi.ac.uk>
 Depends: R (>= 2.4.0), affy , ath1121501cdf , tinesath1cdf , RColorBrewer , methods, grid
 Description: Cross-hybridisation study on the ATH1 Affymetrix GeneChip
 License: Artistic-2.0
-biocViews: ExperimentData
+biocViews: ExperimentData, Tissue, MicroarrayData, TissueMicroarrayData
